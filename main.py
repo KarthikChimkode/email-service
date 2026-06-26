@@ -31,7 +31,7 @@ def send_actual_email(to, subject, body, cc):
     msg["Subject"]=subject
     msg["From"]=EMAIL
     msg["To"]=to
-    msg["Cc"]=cc 
+    msg["Cc"]=", ".join(cc)
 
     with smtplib.SMTP("smtp.gmail.com", 587) as server:
 
